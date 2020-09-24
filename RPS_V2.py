@@ -13,7 +13,7 @@ import datetime
 from datetime import datetime
 #import tkinter
 #from tkinter import *
-import easygui as eg
+from easygui import *
 
 
 def mainGame():
@@ -21,7 +21,7 @@ def mainGame():
         def timeLapse():
             print("     ")
             time.sleep(float(outputDelay))
-        outputDelay=eg.enterbox("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
+        outputDelay=enterbox("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
         #outputDelay = input("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
         timeLapse()
         print ("You've chosen an output delay of " + outputDelay +' seconds.')
