@@ -26,7 +26,7 @@ class Application(tk.Frame):
 
     def create_widgets(self):
         self.hi_there = tk.Button(self)
-        self.hi_there["text"] = "Hello World\n(click me)"
+        self.hi_there["text"] = "RPS\n(Version 2.1)"
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
 
@@ -36,6 +36,19 @@ class Application(tk.Frame):
 
     def say_hi(self):
         print("hi there, everyone!")
+
+    def toggleFullscreen(self,event):
+        self.fullScreenState = not self.fullScreenState
+        self.window.attributes("-fullscreen", self.fullScreenState)
+    
+    def quitFullScreen(self, event):
+        self.fullScreenState = False
+        self.window.attributes("-fullscreen", self.fullScreenState)
+    def rpsLogo(): #Doesn't Work. Tired now.
+        canvas = Canvas(root, width = 300, height = 300)      
+        canvas.pack()      
+        img = PhotoImage(file="RPS_Logo")      
+        canvas.create_image(20,20, anchor=NW, image=img)   
 
 root = tk.Tk()
 app = Application(master=root)
