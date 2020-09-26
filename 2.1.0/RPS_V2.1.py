@@ -47,7 +47,7 @@ class Application(tk.Frame):
     def rpsLogo(): #Doesn't Work. Tired now.
         canvas = Canvas(root, width = 300, height = 300)      
         canvas.pack()      
-        img = PhotoImage(file="RPS_Logo")      
+        img = PhotoImage(file="E:\Github\Repo\Python\RPS_V2\2.1.0")      
         canvas.create_image(20,20, anchor=NW, image=img)   
 
 root = tk.Tk()
